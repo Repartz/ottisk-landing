@@ -36,6 +36,7 @@ interface TestimonialDoc extends Testimonial {
 
 interface FormState {
   name: string;
+  name_en: string;
   location_ru: string;
   location_en: string;
   role_ru: string;
@@ -47,6 +48,7 @@ interface FormState {
 
 const emptyForm: FormState = {
   name: '',
+  name_en: '',
   location_ru: '',
   location_en: '',
   role_ru: '',
@@ -142,6 +144,7 @@ export default function AdminTestimonials() {
 
       const data = {
         name: form.name.trim(),
+        name_en: form.name_en.trim() || form.name.trim(),
         location_ru: form.location_ru.trim(),
         location_en: form.location_en.trim(),
         role_ru: form.role_ru.trim(),
@@ -190,6 +193,7 @@ export default function AdminTestimonials() {
     setError(null);
     setForm({
       name: item.name,
+      name_en: item.name_en || '',
       location_ru: item.location_ru || '',
       location_en: item.location_en || '',
       role_ru: item.role_ru || '',
@@ -305,17 +309,27 @@ export default function AdminTestimonials() {
         title={editingId ? t('edit_testimonial') : t('new_testimonial')}
       >
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Имя автора + order */}
+          {/* Имя автора RU + EN + order */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="sm:col-span-2">
+            <div>
               <label className="block text-xs font-mono uppercase tracking-wider text-muted-foreground mb-2">
-                {t('field_author_name')}
+                {t('field_author_name')} (RU)
               </label>
               <Input
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder="Иван Иванов"
+                placeholder="Иван"
                 required
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-mono uppercase tracking-wider text-muted-foreground mb-2">
+                {t('field_author_name')} (EN)
+              </label>
+              <Input
+                value={form.name_en}
+                onChange={(e) => setForm({ ...form, name_en: e.target.value })}
+                placeholder="Ivan"
               />
             </div>
             <div>

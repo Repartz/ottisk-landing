@@ -11,6 +11,7 @@ import type { Metadata } from 'next';
 import { locales } from '@/i18n';
 import siteConfig from '@/config/site.json';
 import { ContactFormProvider } from '@/components/effects/ContactFormProvider';
+import { SmoothScrollProvider } from '@/components/effects/SmoothScrollProvider';
 import { CookieBanner } from '@/components/effects/CookieBanner';
 
 export function generateStaticParams() {
@@ -95,8 +96,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
       />
-      <ContactFormProvider>{children}</ContactFormProvider>
-      <CookieBanner />
+      <SmoothScrollProvider>
+        <ContactFormProvider>{children}</ContactFormProvider>
+        <CookieBanner />
+      </SmoothScrollProvider>
     </NextIntlClientProvider>
   );
 }

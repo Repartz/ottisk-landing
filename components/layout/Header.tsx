@@ -12,10 +12,10 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { useTheme } from '@/components/effects/ThemeProvider';
+
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/navigation';
-import { Menu, X, Sun, Moon, Send } from 'lucide-react';
+import { Menu, X, Send } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Logo } from '@/components/ui/Logo';
 import { scrollToId } from '@/lib/scroll';
@@ -35,7 +35,7 @@ export function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, setTheme, resolvedTheme } = useTheme();
+
   const t = useTranslations('nav');
   const tCommon = useTranslations('common');
   const locale = useLocale();
@@ -107,11 +107,7 @@ export function Header() {
     router.replace(pathname, { locale: next });
   };
 
-  const toggleTheme = () => {
-    const order: Array<'dark' | 'light' | 'system'> = ['dark', 'light', 'system'];
-    const idx = order.indexOf(theme);
-    setTheme(order[(idx + 1) % order.length]);
-  };
+
 
   return (
     <>
@@ -151,20 +147,6 @@ export function Header() {
 
           {/* Правые элементы */}
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Переключатель темы */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-              aria-label={tCommon('toggle_theme')}
-              type="button"
-            >
-              {resolvedTheme === 'dark' ? (
-                <Moon className="h-5 w-5 text-foreground" />
-              ) : (
-                <Sun className="h-5 w-5 text-foreground" />
-              )}
-            </button>
-
             {/* Переключатель языка */}
             <button
               onClick={toggleLocale}

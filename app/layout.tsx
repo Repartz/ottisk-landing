@@ -108,6 +108,7 @@ export default function RootLayout({
     <html
       lang="ru"
       className={`${manrope.variable} ${jetbrainsMono.variable} dark`}
+      style={{ colorScheme: 'dark' }}
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
