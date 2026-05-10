@@ -31,7 +31,8 @@
       "Exec(ln)",
       "Exec(python3)",
       "Exec(git status)",
-      "Exec(git init)"
+      "Exec(git init)",
+      "Exec(git remote)"
     ]
   }
 }
