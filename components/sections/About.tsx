@@ -72,15 +72,12 @@ export function About() {
     contentRef.current.style.transform = 'translateY(0)';
   });
 
-  // Статистика анимация
+  // Статистика — анимируем весь блок целиком (не отдельные items)
   useRevealOnScroll(statsRef, () => {
-    const items = statsRef.current?.querySelectorAll<HTMLElement>('.stat-item');
-    if (!items) return;
-    items.forEach((item, i) => {
-      item.style.transition = `opacity 0.7s ease ${i * 0.15}s, transform 0.7s ease ${i * 0.15}s`;
-      item.style.opacity = '1';
-      item.style.transform = 'translateY(0)';
-    });
+    if (!statsRef.current) return;
+    statsRef.current.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    statsRef.current.style.opacity = '1';
+    statsRef.current.style.transform = 'translateY(0)';
   });
 
   const noAnim = prefersReducedMotion();
@@ -177,14 +174,10 @@ export function About() {
               { end: 72, label: t('stats.testing_label') },
               { end: 48, label: t('stats.support_label') },
               { end: null, label: t('stats.team_label') },
-            ].map(({ end, label }, i) => (
+            ].map(({ end, label }, idx) => (
               <div
-                key={i}
+                key={idx}
                 className="stat-item"
-                style={{
-                  opacity: noAnim ? 1 : 0,
-                  transform: noAnim ? 'none' : 'translateY(30px)',
-                }}
               >
                 <div
                   className="font-bold text-primary mb-2 leading-none"

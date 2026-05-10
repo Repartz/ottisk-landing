@@ -28,7 +28,7 @@ export function NumberCounter({
 }: NumberCounterProps) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const isInView = useInView(ref, { once: true, margin: '0px', threshold: 0 });
   const hasAnimated = useRef(false);
 
   useEffect(() => {
