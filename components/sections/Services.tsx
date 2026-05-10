@@ -10,7 +10,6 @@
 // ============================================
 
 import { useEffect, useRef } from 'react';
-import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
 import { useTranslations, useLocale } from 'next-intl';
@@ -19,6 +18,22 @@ import { useContactForm } from '@/components/effects/ContactFormProvider';
 import contentConfig from '@/config/content.json';
 import { prefersReducedMotion } from '@/lib/utils';
 import { useExchangeRate, formatUsdPrice } from '@/hooks/useExchangeRate';
+
+// Простая анимация через IntersectionObserver — работает на всех устройствах
+function useRevealOnScroll(ref: React.RefObject<HTMLElement | null>, onEnter: () => void) {
+  useEffect(() => {
+    if (prefersReducedMotion()) { onEnter(); return; }
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) { onEnter(); observer.disconnect(); } }); },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+}
 
 export function Services() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -29,46 +44,20 @@ export function Services() {
   const contactForm = useContactForm();
   const exchangeRate = useExchangeRate();
 
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-
-    const ctx = gsap.context(() => {
-      const lines = tableRef.current?.querySelectorAll('.spec-line');
-      const rows = tableRef.current?.querySelectorAll('.spec-row');
-
-      if (lines && lines.length > 0) {
-        gsap.from(lines, {
-          scaleX: 0,
-          duration: 0.6,
-          stagger: 0.06,
-          ease: 'power2.out',
-          transformOrigin: 'left center',
-          scrollTrigger: {
-            trigger: tableRef.current,
-            start: 'top 80%',
-            once: true,
-          },
-        });
-      }
-
-      if (rows && rows.length > 0) {
-        gsap.from(rows, {
-          opacity: 0,
-          x: -16,
-          duration: 0.5,
-          stagger: 0.08,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: tableRef.current,
-            start: 'top 78%',
-            once: true,
-          },
-        });
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  // Анимация строк таблицы через IntersectionObserver
+  useRevealOnScroll(tableRef, () => {
+    const rows = tableRef.current?.querySelectorAll<HTMLElement>('.spec-row');
+    const lines = tableRef.current?.querySelectorAll<HTMLElement>('.spec-line');
+    lines?.forEach((line, i) => {
+      line.style.transition = `transform 0.5s ease ${i * 0.04}s`;
+      line.style.transform = 'scaleX(1)';
+    });
+    rows?.forEach((row, i) => {
+      row.style.transition = `opacity 0.45s ease ${i * 0.07}s, transform 0.45s ease ${i * 0.07}s`;
+      row.style.opacity = '1';
+      row.style.transform = 'translateX(0)';
+    });
+  });
 
   const handleContactClick = () => contactForm.open('services');
 
@@ -107,21 +96,21 @@ export function Services() {
         <div ref={tableRef} className="max-w-5xl mx-auto mb-10">
           {/* Заголовок таблицы — только на md+ */}
           <div className="hidden md:block">
-            <div className="spec-line h-px bg-border mb-3" />
+            <div className="spec-line h-px bg-border mb-3" style={{ transform: 'scaleX(0)', transformOrigin: 'left center' }} />
             <div className="grid grid-cols-12 gap-4 px-4 mb-2 text-xs font-mono text-muted-foreground uppercase tracking-wider">
               <div className="col-span-5">{t('table.service')}</div>
               <div className="col-span-2 text-center">{t('table.duration')}</div>
               <div className="col-span-2 text-center">{t('table.price')}</div>
               <div className="col-span-3 text-right">{t('table.stack')}</div>
             </div>
-            <div className="spec-line h-px bg-border mb-2" />
+            <div className="spec-line h-px bg-border mb-2" style={{ transform: 'scaleX(0)', transformOrigin: 'left center' }} />
           </div>
 
           {/* Строки */}
           {services.map((service) => (
             <div key={service.id}>
               {/* Десктоп: грид-таблица */}
-              <div className="spec-row hidden md:grid grid-cols-12 gap-4 px-4 py-5 hover:bg-surface/40 transition-colors group">
+              <div className="spec-row hidden md:grid grid-cols-12 gap-4 px-4 py-5 hover:bg-surface/40 transition-colors group" style={{ opacity: 0, transform: 'translateX(-12px)' }}>
                 <div className="col-span-5">
                   <div className="text-foreground font-bold mb-1 group-hover:text-primary transition-colors">
                     {t(`items.${service.id}.title`)}
@@ -142,7 +131,7 @@ export function Services() {
               </div>
 
               {/* Мобильный: карточка */}
-              <div className="spec-row md:hidden py-5 px-2">
+              <div className="spec-row md:hidden py-5 px-2" style={{ opacity: 0, transform: 'translateX(-12px)' }}>
                 <div className="text-foreground font-bold mb-2">
                   {t(`items.${service.id}.title`)}
                 </div>
@@ -170,7 +159,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <div className="spec-line h-px bg-border/40" />
+              <div className="spec-line h-px bg-border/40" style={{ transform: 'scaleX(0)', transformOrigin: 'left center' }} />
             </div>
           ))}
         </div>

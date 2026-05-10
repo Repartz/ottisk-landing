@@ -33,7 +33,8 @@
       "Exec(git status)",
       "Exec(git init)",
       "Exec(git remote)",
-      "Exec(git add)"
+      "Exec(git add)",
+      "Exec(git commit)"
     ]
   }
 }
