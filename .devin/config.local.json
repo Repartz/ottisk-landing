@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Exec(node)",
+      "Exec(npm install)",
+      "Exec(mkdir)",
+      "Exec(rm)",
+      "Exec(npm run)",
+      "Exec(curl)",
+      "Exec(head)",
+      "Exec(ffmpeg)",
+      "Exec(ls)",
+      "Exec(file)",
+      "Exec(grep)",
+      "Exec(wc)",
+      "Exec(npm view)",
+      "Exec(find)",
+      "Exec(ffprobe)",
+      "Exec(cp)",
+      "Exec(tail)",
+      "Exec(awk)",
+      "Exec(npx tsc)",
+      "Exec(lsof)",
+      "Exec(kill)",
+      "Exec(sleep)",
+      "Exec(timeout bash)",
+      "Exec(dscacheutil)",
+      "Exec(npm list)",
+      "Exec(true)",
+      "Exec(brew link)",
+      "Exec(ln)",
+      "Exec(python3)",
+      "Exec(git status)",
+      "Exec(git init)"
+    ]
+  }
+}

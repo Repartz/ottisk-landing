@@ -1,0 +1,244 @@
+{
+  "_comment": "Структурированный контент сайта: услуги, отзывы, FAQ, шаги процесса. Меняйте значения, но НЕ удаляйте ключи!",
+  "services": {
+    "_comment": "Список услуг. id используется как ключ переводов в messages/{ru,en}.json",
+    "items": [
+      {
+        "id": "telegram",
+        "icon": "Bot",
+        "duration_ru": "3–14 дн",
+        "duration_en": "3–14 days",
+        "price_ru": "5–60 тыс ₽",
+        "price_en": "5–60k RUB",
+        "stack": "Node.js, Bot API"
+      },
+      {
+        "id": "social",
+        "icon": "MessageCircle",
+        "duration_ru": "5–21 дн",
+        "duration_en": "5–21 days",
+        "price_ru": "10–70 тыс ₽",
+        "price_en": "10–70k RUB",
+        "stack": "VK API, Senler"
+      },
+      {
+        "id": "websites",
+        "icon": "Globe",
+        "duration_ru": "7–30 дн",
+        "duration_en": "7–30 days",
+        "price_ru": "25–120 тыс ₽",
+        "price_en": "25–120k RUB",
+        "stack": "Next.js, Tailwind"
+      },
+      {
+        "id": "apps",
+        "icon": "Smartphone",
+        "duration_ru": "30–90 дн",
+        "duration_en": "30–90 days",
+        "price_ru": "150–500 тыс ₽",
+        "price_en": "150–500k RUB",
+        "stack": "React Native"
+      },
+      {
+        "id": "support",
+        "icon": "Wrench",
+        "duration_ru": "∞",
+        "duration_en": "∞",
+        "price_ru": "5–50 тыс ₽",
+        "price_en": "5–50k RUB",
+        "stack": "Любой стек"
+      },
+      {
+        "id": "rework",
+        "icon": "Code2",
+        "duration_ru": "1–14 дн",
+        "duration_en": "1–14 days",
+        "price_ru": "5–50 тыс ₽",
+        "price_en": "5–50k RUB",
+        "stack": "Анализ + фикс"
+      }
+    ]
+  },
+  "process": {
+    "_comment": "5 шагов процесса работы. Тексты — в messages/{ru,en}.json",
+    "steps": [
+      { "id": 1, "key": "1" },
+      { "id": 2, "key": "2" },
+      { "id": 3, "key": "3" },
+      { "id": 4, "key": "4" },
+      { "id": 5, "key": "5" }
+    ]
+  },
+  "testimonials": {
+    "_comment": "9 отзывов клиентов. Имена, локации, должности — здесь. Тексты — здесь же (на русском). Перевод EN — добавьте позже.",
+    "items": [
+      {
+        "id": "1",
+        "name": "Алексей",
+        "name_en": "Alexey",
+        "location_ru": "г. Краснодар",
+        "location_en": "Krasnodar",
+        "role_ru": "Владелец онлайн-школы по йоге",
+        "role_en": "Online yoga school owner",
+        "text_ru": "Пацаны из OTTISK сделали мне Телеграм-бота за копейки относительно студий. Я если честно боялся — думал новички, накосячат. Но они три дня гоняли бота тестами, звонили по любому чиху. В итоге ученики теперь автоматом получают уроки, а я забыл, что такое ручная рассылка. Пацаны оставляют отпечаток, реально!",
+        "text_en": "OTTISK guys made me a Telegram bot for pennies compared to studios. Honestly, I was scared — thought newbies would mess it up. But they spent three days testing the bot and called for every little thing. Now my students get lessons automatically, and I forgot what manual sending is. They really leave a mark!"
+      },
+      {
+        "id": "2",
+        "name": "Марина",
+        "name_en": "Marina",
+        "location_ru": "г. Новосибирск",
+        "location_en": "Novosibirsk",
+        "role_ru": "Инфобизнес",
+        "role_en": "Info-business owner",
+        "text_ru": "Мне нужен был лендинг с нуля, не на Тильде, потому что дизайн сложный. Ребята написали чистый код, всё адаптивно, скорость загрузки — пушка. Сказали, если упадет — 48 часов на починку. Пока не падало, но я спокойна. Отпечаток в истории? Они его оставили у меня в продажах.",
+        "text_en": "I needed a landing page from scratch, not on Tilda, because the design was complex. The guys wrote clean code, everything is responsive, loading speed is amazing. They said if it goes down — 48 hours to fix. Hasn't gone down yet, but I'm calm. Mark in history? They left it in my sales."
+      },
+      {
+        "id": "3",
+        "name": "Екатерина",
+        "name_en": "Ekaterina",
+        "location_ru": "г. Сочи",
+        "location_en": "Sochi",
+        "role_ru": "Владелица кофейни",
+        "role_en": "Coffee shop owner",
+        "text_ru": "Искала простого бота для записи на каппинги. В крупных студиях отмахивались от мелкого заказа. OTTISK взялись с энтузиазмом: брифинг, вопросы, пробный запуск через 4 дня. Теперь бариста освобождены от телефона, а гости записываются в пару кликов. Рекомендую.",
+        "text_en": "I was looking for a simple bot for cupping appointments. Big studios brushed off the small order. OTTISK took it on with enthusiasm: briefing, questions, pilot launch in 4 days. Now baristas are free from phones, and guests sign up in a couple of clicks. I recommend."
+      },
+      {
+        "id": "4",
+        "name": "Анжела",
+        "name_en": "Angela",
+        "location_ru": "г. Екатеринбург",
+        "location_en": "Yekaterinburg",
+        "role_ru": "Блогер-миллионник",
+        "role_en": "Million-follower blogger",
+        "text_ru": "Нужен был бот-визитка с мультиссылками и автоприёмом донатов. Обратилась к OTTISK по рекомендации. Договорная цена, хотя сначала смутило. Но в итоге я получила даже больше функций, чем планировала, и всё уложилось в оговорённую сумму. Теперь мои админы отдыхают.",
+        "text_en": "I needed a business card bot with multi-links and auto-donation reception. I turned to OTTISK on recommendation. Negotiated price, although it was confusing at first. But in the end, I got even more features than planned, and everything fit within the agreed amount. Now my admins are resting."
+      },
+      {
+        "id": "5",
+        "name": "Сергей",
+        "name_en": "Sergey",
+        "location_ru": "г. Владивосток",
+        "location_en": "Vladivostok",
+        "role_ru": "Основатель сети автосервисов",
+        "role_en": "Founder of auto service chain",
+        "text_ru": "Заказывал лендинг для новой услуги. Сроки горели, ребята вошли в положение и сдали за 5 дней. Код без говна, не стыдно показать SEO-специалисту. Упавший сайт? Не слышал. Но знаю, что если что — бегом починят. Молодцы!",
+        "text_en": "I ordered a landing page for a new service. Deadlines were burning, the guys understood the situation and delivered in 5 days. Clean code, not ashamed to show to an SEO specialist. Site down? Haven't heard. But I know if anything — they'll fix it fast. Well done!"
+      },
+      {
+        "id": "6",
+        "name": "Максим",
+        "name_en": "Maxim",
+        "location_ru": "г. Ростов-на-Дону",
+        "location_en": "Rostov-on-Don",
+        "role_ru": "Менеджер event-агентства",
+        "role_en": "Event agency manager",
+        "text_ru": "Сделали телегу-бота для регистрации участников фестиваля. У нас 3000 человек прошло, ни одного глюка. Ребята протестировали нагрузку заранее. Потом еще и спасибо сказали, что мы их первые большие — теперь этот кейс себе в портфолио добавили. Мне не жалко, респект.",
+        "text_en": "They made a Telegram bot for festival participant registration. We had 3000 people pass through, not a single glitch. The guys tested the load in advance. Then they said thank you for being their first big one — now they added this case to their portfolio. I don't mind, respect."
+      },
+      {
+        "id": "7",
+        "name": "Ольга",
+        "name_en": "Olga",
+        "location_ru": "г. Тюмень",
+        "location_en": "Tyumen",
+        "role_ru": "Преподаватель английского",
+        "role_en": "English teacher",
+        "text_ru": "Заказала простой бот для выдачи PDF-уроков. В процессе поняли, что можно добавить викторину. OTTISK быстро пересогласовали цену (договорная, помните?) и сделали конфетку. Теперь ученики вовлечены, а я получаю лиды без рекламы.",
+        "text_en": "I ordered a simple bot for PDF lessons delivery. In the process we realized we could add a quiz. OTTISK quickly renegotiated the price (negotiable, remember?) and made it sweet. Now students are engaged, and I get leads without advertising."
+      },
+      {
+        "id": "8",
+        "name": "Дамир",
+        "name_en": "Damir",
+        "location_ru": "г. Уфа",
+        "location_en": "Ufa",
+        "role_ru": "Предприниматель по аренде авто",
+        "role_en": "Car rental entrepreneur",
+        "text_ru": "Нашёл ребят в чате предпринимателей. Кричали «новички», но я рискнул. Итог: система бронирования на сайте + бот в Телеграм. 48 часов на исправление? У них проблема решилась за 4 часа, когда хост лёг. Просто решают вопросы, а не прячутся. Теперь я их постоянный клиент.",
+        "text_en": "Found the guys in an entrepreneur chat. They were called 'newbies', but I took the risk. Result: booking system on website + Telegram bot. 48 hours to fix? Their problem was solved in 4 hours when the host went down. They just solve issues, not hide. Now I'm their regular client."
+      },
+      {
+        "id": "9",
+        "name": "Вика",
+        "name_en": "Vika",
+        "location_ru": "г. Омск",
+        "location_en": "Omsk",
+        "role_ru": "Хозяйка интернет-магазина бижутерии",
+        "role_en": "Jewelry online store owner",
+        "text_ru": "Написала ребятам в Telegram, долго объясняла, что хочу чат-бота с каталогом. Парни не поленились созвониться, нарисовали схему на доске. Через неделю тестировали уже на моих подписчиках. Впервые бот не тупит, а продаёт на автомате. Очень человечный подход.",
+        "text_en": "Wrote to the guys on Telegram, explained for a long time that I want a chatbot with a catalog. The guys didn't lazy to call, drew a scheme on the board. A week later, they were already testing on my subscribers. For the first time, the bot doesn't glitch, but sells automatically. Very human approach."
+      }
+    ]
+  },
+  "faq": {
+    "_comment": "9 вопросов FAQ. Меняйте тексты, но не удаляйте id.",
+    "items": [
+      {
+        "id": "1",
+        "question_ru": "Вы новички, какой у вас опыт? Почему я должен доверять?",
+        "question_en": "You're newbies, what's your experience? Why should I trust you?",
+        "answer_ru": "Мы в начале пути, но наш багаж — это реальное умение писать чистый код и огромное желание расти. Мы компенсируем отсутствие портфолио тройным контролем: брифинг, тестирование 72 часа перед запуском и бесплатным ремонтом в течение 48 часов. Вы получаете не «кот в мешке», а проект, который прошёл проверку огнём.",
+        "answer_en": "We're at the beginning of our journey, but our baggage is the real ability to write clean code and a huge desire to grow. We compensate for the lack of portfolio with triple control: briefing, 72-hour testing before launch, and free repair within 48 hours. You get not a 'pig in a poke', but a project that has passed the fire test."
+      },
+      {
+        "id": "2",
+        "question_ru": "Какие чат-боты вы делаете и для каких платформ?",
+        "question_en": "What chatbots do you make and for which platforms?",
+        "answer_ru": "Делаем ботов для Telegram и любых соцсетей, где есть API — ВКонтакте, VK Mini Apps, Senler и других. Можем написать кастомного бота под специфическую платформу. Всё зависит от вашей задачи: от простого автоответчика до полноценного магазина с приёмом платежей.",
+        "answer_en": "We make bots for Telegram and any social networks with API — VKontakte, VK Mini Apps, Senler and others. We can write a custom bot for a specific platform. It all depends on your task: from a simple auto-responder to a full-fledged shop with payment acceptance."
+      },
+      {
+        "id": "3",
+        "question_ru": "Вы делаете только под ключ или можете доделать начатое?",
+        "question_en": "Do you only do turnkey, or can you finish what's started?",
+        "answer_ru": "Берёмся и за готовые проекты при наличии исходных файлов кода. Разберём чужой код, исправим баги и доведём до ума.",
+        "answer_en": "We also take on existing projects if source code files are available. We'll analyze someone else's code, fix bugs, and polish it."
+      },
+      {
+        "id": "4",
+        "question_ru": "Как строится сотрудничество?",
+        "question_en": "How does cooperation work?",
+        "answer_ru": "1. Созвон/чат — обсуждаем задачу. 2. Onboarding-бриф: фиксируем все хотелки, сроки, бюджет. 3. Разработка с промежуточными отчётами. 4. Тестирование 3 дня силами команды. 5. Передача проекта + инструкция (если нужна). 6. Поддержка: упало — чиним 48 часов.",
+        "answer_en": "1. Call/chat — discuss the task. 2. Onboarding brief: fix all wishes, deadlines, budget. 3. Development with intermediate reports. 4. 3-day testing by the team. 5. Project handover + manual (if needed). 6. Support: if it goes down — we fix it in 48 hours."
+      },
+      {
+        "id": "5",
+        "question_ru": "Какие гарантии, что бот/сайт не ляжет?",
+        "question_en": "What guarantees that the bot/site won't go down?",
+        "answer_ru": "Мы тестируем на разных устройствах, нагрузках и сценариях. Плюс гарантия: в течение оговорённого срока после запуска любые критичные ошибки исправляются бесплатно.",
+        "answer_en": "We test on different devices, loads, and scenarios. Plus a guarantee: within the agreed time after launch, any critical errors are fixed for free."
+      },
+      {
+        "id": "6",
+        "question_ru": "Цены — почему договорные?",
+        "question_en": "Prices — why negotiable?",
+        "answer_ru": "Каждый проект уникален. Мы не берём фикс с потолка, а оцениваем трудозатраты. Вы платите за реальный объём кода и логики, а не за красивую презентацию.",
+        "answer_en": "Each project is unique. We don't take a fixed price out of thin air, but estimate the labor costs. You pay for the real volume of code and logic, not for a beautiful presentation."
+      },
+      {
+        "id": "7",
+        "question_ru": "Вы работаете только по предоплате?",
+        "question_en": "Do you only work with prepayment?",
+        "answer_ru": "Обычно 50/50 или разбивка по этапам — это обсуждается на брифе. Главное — чтобы обе стороны чувствовали себя в безопасности.",
+        "answer_en": "Usually 50/50 or breakdown by stages — this is discussed at the briefing. The main thing is that both parties feel safe."
+      },
+      {
+        "id": "8",
+        "question_ru": "Есть ли у вас специализация по автоворонкам?",
+        "question_en": "Do you specialize in sales funnels?",
+        "answer_ru": "Да. Мы можем запрограммировать бота под выстроенную маркетинговую схему: выдачу лид-магнитов, квизы, мультишаговые прогревы, интеграцию с CRM и платёжками.",
+        "answer_en": "Yes. We can program a bot for a built marketing scheme: delivery of lead magnets, quizzes, multi-step warming, integration with CRM and payments."
+      },
+      {
+        "id": "9",
+        "question_ru": "Берёте ли доработки и поддержку после сдачи?",
+        "question_en": "Do you take on rework and support after delivery?",
+        "answer_ru": "Конечно. Тариф на поддержку после завершения гарантийного срока обговаривается отдельно, но мы всегда открыты к долгосрочной дружбе.",
+        "answer_en": "Of course. The support rate after the warranty period is negotiated separately, but we are always open to long-term friendship."
+      }
+    ]
+  }
+}

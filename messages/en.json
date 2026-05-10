@@ -1,0 +1,226 @@
+{
+  "_comment": "English localization for OTTISK website",
+  "metadata": {
+    "title": "OTTISK — Leaving a Mark in History",
+    "description": "Web development team. Clean code, honest approach, results."
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "process": "Process",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "OTTISK",
+    "subtitle": "Leaving a Mark in History",
+    "description": "We don't just make websites and bots — we redefine web development. Clean code, honest approach, results.",
+    "cta_primary": "Send Request",
+    "cta_secondary": "View Portfolio",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Who we are",
+    "kinetic_1": "WE",
+    "kinetic_2": "LEAVE",
+    "kinetic_3": "A MARK",
+    "description": "OTTISK is a team that leaves a mark in history. We don't just make websites and bots, we redefine web development.",
+    "philosophy": "Our philosophy is simple: clean code, honest approach, and results we're proud of.",
+    "stats": {
+      "testing_label": "hours of testing before launch",
+      "support_label": "hours to fix critical bugs",
+      "team_label": "distributed team of professionals"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "What we do",
+    "disclaimer": "Average price and timeline range. Exact cost and timeline after discussing all details. Prepayment required.",
+    "table": {
+      "service": "Service",
+      "duration": "Duration",
+      "price": "Price",
+      "stack": "Stack"
+    },
+    "items": {
+      "telegram": {
+        "title": "Telegram Bots",
+        "description": "From simple business cards to complex funnels, shops, and service assistants."
+      },
+      "social": {
+        "title": "Social Chatbots",
+        "description": "VKontakte, VK Mini Apps, Senler, and any API-enabled platforms. CRM and payment integration."
+      },
+      "apps": {
+        "title": "Applications",
+        "description": "Native and web applications. Hand-coded, no constructor garbage."
+      },
+      "websites": {
+        "title": "Websites & Landings",
+        "description": "Hand-coded from scratch. No Tilda/Webflow. Fully custom."
+      },
+      "support": {
+        "title": "Support",
+        "description": "If our work breaks — we fix it within 48 hours for free. Long-term friendship welcome."
+      },
+      "rework": {
+        "title": "Rework",
+        "description": "We take on existing projects. We'll analyze someone else's code, fix bugs, and polish it."
+      }
+    },
+    "cta": "Discuss Project"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Our Work",
+    "empty_title": "First cases will appear here soon",
+    "empty_text": "Want to be the first?",
+    "cta": "Send Request",
+    "open_project": "Open"
+  },
+  "process": {
+    "title": "Process",
+    "subtitle": "How We Work",
+    "steps": {
+      "1": { "title": "Briefing", "description": "Call or chat. We discuss the task, fix requirements, deadlines, and budget." },
+      "2": { "title": "Onboarding", "description": "We formalize requirements. Write specs, agree on designs and architecture." },
+      "3": { "title": "Development", "description": "We code with progress reports. You see real-time progress." },
+      "4": { "title": "Testing", "description": "3 days of testing on different devices and loads." },
+      "5": { "title": "Launch", "description": "Project handover + manual. Guarantee: 48 hours to fix critical bugs." }
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What Clients Say",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "cta": "Send Request",
+    "empty_title": "No testimonials yet",
+    "empty_text": "Be the first to share your experience working with us."
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Frequently Asked Questions"
+  },
+  "footer": {
+    "copyright": "© 2026 OTTISK. All rights reserved.",
+    "telegram": "Telegram",
+    "sitemap": "Sitemap",
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "cta_primary": "Send Request",
+    "made_with": "Made with",
+    "by": "by OTTISK team"
+  },
+  "contacts": {
+    "telegram_label": "Telegram",
+    "email_label": "Email"
+  },
+  "preloader": {
+    "loading": "Loading"
+  },
+  "common": {
+    "open_telegram": "Open Telegram",
+    "open_email": "Send email",
+    "toggle_theme": "Toggle theme",
+    "toggle_locale": "Toggle language",
+    "menu": "Menu",
+    "close": "Close",
+    "cta_contact": "Send Request"
+  },
+  "contact_form": {
+    "title": "Send Request",
+    "close": "Close form",
+    "field_name": "Your name",
+    "placeholder_name": "John Doe",
+    "field_phone": "Phone",
+    "field_email": "Email",
+    "field_channel": "Telegram username",
+    "placeholder_telegram": "@username",
+    "field_service": "Service",
+    "placeholder_custom_service": "Describe your task in one line",
+    "field_message": "Your message",
+    "placeholder_message": "Tell us about the project: goals, deadlines, budget, what's already in place. The more detail — the more accurate the reply.",
+    "submit": "Send request",
+    "submitting": "Sending…",
+    "cancel": "Cancel",
+    "hint": "We'll get back to you within one working day. Your data is used only to reply.",
+    "agree_prefix": "I have read and agree to the",
+    "agree_link": "privacy policy and personal data processing terms",
+    "success_title": "Request sent",
+    "success_text": "Thanks! We've received your request and will reach out via your chosen messenger as soon as possible.",
+    "success_close": "Close",
+    "services": {
+      "telegram": "Telegram bots",
+      "social": "Social chatbots",
+      "websites": "Websites & landings",
+      "apps": "Applications",
+      "support": "Support",
+      "rework": "Rework",
+      "other": "Other"
+    },
+    "errors": {
+      "name_required": "Please enter your name",
+      "phone_required": "Please enter your phone",
+      "phone_invalid": "Enter 11 digits (e.g. +7 999 123 45 67)",
+      "email_required": "Please enter your email",
+      "email_invalid": "Email is invalid",
+      "channel_required": "Please enter your Telegram username",
+      "agree_required": "Please accept the privacy policy",
+      "custom_service_required": "Please describe the service",
+      "message_required": "Please describe your task (10 chars min)",
+      "submit_failed": "Failed to send. Try again or message us directly on Telegram.",
+      "smtp_not_configured": "Form temporarily unavailable. Reach us directly via Telegram — see footer."
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "subtitle": "OTTISK",
+    "login_title": "Login",
+    "password": "Password",
+    "submit": "Sign In",
+    "logout": "Logout",
+    "wrong_password": "Wrong password",
+    "connection_error": "Connection error",
+    "loading": "Loading…",
+    "stats_visitors": "Visitors",
+    "stats_portfolio": "Projects",
+    "stats_testimonials": "Testimonials",
+    "manage_portfolio": "Portfolio",
+    "manage_portfolio_desc": "Add, edit, and delete projects",
+    "manage_testimonials": "Testimonials",
+    "manage_testimonials_desc": "Manage client testimonials",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "add_project": "Add project",
+    "edit_project": "Edit project",
+    "new_project": "New project",
+    "title_ru": "Title (RU)",
+    "title_en": "Title (EN)",
+    "description_ru": "Description (RU)",
+    "description_en": "Description (EN)",
+    "image_url": "Image URL",
+    "tags": "Tags (comma-separated)",
+    "confirm_delete": "Delete project?",
+    "firebase_not_configured": "Firebase is not configured. Connect it in the final development phase.",
+    "add_testimonial": "Add testimonial",
+    "edit_testimonial": "Edit testimonial",
+    "new_testimonial": "New testimonial",
+    "field_author_name": "Author name",
+    "field_author_role_ru": "Role / occupation (RU)",
+    "field_author_role_en": "Role / occupation (EN)",
+    "field_author_location_ru": "City / country (RU)",
+    "field_author_location_en": "City / country (EN)",
+    "field_text_ru": "Testimonial text (RU)",
+    "field_text_en": "Testimonial text (EN)",
+    "confirm_delete_testimonial": "Delete testimonial?",
+    "no_testimonials": "No testimonials in Firestore yet. Using fallback from config/content.json (9 items).",
+    "fallback_hint": "To switch to Firestore — add the first testimonial via this form. Then static content.json will no longer be used."
+  }
+}

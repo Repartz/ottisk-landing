@@ -1,0 +1,23 @@
+{
+  "_comment": "Глобальные настройки сайта: URL, ссылки, контакты. Используется в SEO и Footer.",
+  "name": "OTTISK",
+  "url": "https://ottisk.vercel.app",
+  "telegram": "https://t.me/ottisk_lab",
+  "telegram_handle": "@ottisk_lab",
+  "whatsapp_number": "+79815442407",
+  "whatsapp_link": "https://wa.me/79815442407",
+  "email_address": "ottiskcomp@gmail.com",
+  "email_link": "mailto:ottiskcomp@gmail.com",
+  "phone": "+79815442407",
+  "social": {
+    "telegram": "https://t.me/ottisk_lab",
+    "whatsapp": "https://wa.me/79815442407",
+    "email": "mailto:ottiskcomp@gmail.com"
+  },
+  "company": {
+    "name": "OTTISK",
+    "description_ru": "Команда веб-разработки. Чистый код, честное отношение, результат.",
+    "description_en": "Web development team. Clean code, honest approach, results.",
+    "founded": "2025"
+  }
+}

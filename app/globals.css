@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   ГЛОБАЛЬНЫЕ СТИЛИ OTTISK
+   Палитра: тёплые тона под ORYZO-стиль
+   ============================================ */
+
+@layer base {
+  :root {
+    /* Светлая тема */
+    --background: #FAFAFA;
+    --foreground: #141210;
+    --card: #FFFFFF;
+    --card-foreground: #141210;
+    --muted: #F1F5F9;
+    --muted-foreground: #756B5E;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #C4A962;
+    --radius: 1rem;
+  }
+
+  .dark,
+  :root {
+    /* Тёмная тема (default) — тёплые тона */
+    --background: #141210;
+    --foreground: #F5F0E8;
+    --card: #1E1A16;
+    --card-foreground: #F5F0E8;
+    --muted: #1E1A16;
+    --muted-foreground: #9A8B7A;
+    --border: #2A2520;
+    --input: #2A2520;
+    --ring: #C4A962;
+    --radius: 1rem;
+  }
+
+  .light {
+    --background: #FAFAFA;
+    --foreground: #141210;
+    --card: #FFFFFF;
+    --card-foreground: #141210;
+    --muted: #F1F5F9;
+    --muted-foreground: #756B5E;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #C4A962;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Кастомный скроллбар */
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgba(196, 169, 98, 0.5);
+    border-radius: 4px;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: #C4A962;
+  }
+
+  /* Уважение к prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: rgba(196, 169, 98, 0.3);
+    color: #F5F0E8;
+  }
+}
+
+@layer components {
+  /* Контейнер с ограничением ширины */
+  .container-ottisk {
+    @apply mx-auto max-w-container px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+
+  /* Градиентный текст (золотой) */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #C4A962 0%, #D4A574 50%, #C4A962 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Свечение для hover-эффектов */
+  .glow-gold {
+    box-shadow:
+      0 0 20px rgba(196, 169, 98, 0.15),
+      0 0 40px rgba(196, 169, 98, 0.1),
+      0 0 60px rgba(196, 169, 98, 0.05);
+  }
+
+  /* Шум/зернистость поверх (тонкий, для текстуры "плёнки") */
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  /* Underline-анимация для ссылок */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@layer components {
+  /* Секция с тёмным/видео фоном — текст всегда светлый (не зависит от темы) */
+  .section-dark {
+    --foreground: #F5F0E8;
+    --muted-foreground: #9A8B7A;
+    color: #F5F0E8;
+  }
+  .section-dark .text-foreground {
+    color: #F5F0E8 !important;
+  }
+  .section-dark .text-muted-foreground {
+    color: #9A8B7A !important;
+  }
+  .section-dark .text-primary {
+    color: #C4A962 !important;
+  }
+  .section-dark .border-l-2 {
+    border-color: #C4A962 !important;
+  }
+}
+
+@layer utilities {
+  /* Обрезка строки */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Скрытие скроллбара (для горизонтального скролла) */
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Доступность: видимый только для скринридеров */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
